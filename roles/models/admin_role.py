@@ -4,7 +4,7 @@ from .role import Role
 
 class AdminRole(models.Model):
     admin = models.ForeignKey(Admin, on_delete=models.CASCADE, related_name='admin_roles')
-    role = models.ForeignKey(Role, on_delete=models.CASCADE, related_name='admins')
+    role = models.ForeignKey(Role, on_delete=models.CASCADE, related_name='admin_roles')
 
     class Meta:
         unique_together = ('admin', 'role')
